@@ -1,0 +1,39 @@
+@(user:Users)
+<br><br>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.navbar-inverse {
+			background-color: #4248ca !important ;
+			border-color: #080808 !important;
+			color: white !important;
+		}
+		a{
+			color: white !important;
+		}
+	</style>
+</head>
+<body style="background-color: #e0e0e0">
+	@main("") {
+	<div>
+		<h1 style="font-family: Calibri;">User Created</h1>
+	</div>
+
+	<em>The following customer has been created successfully:</em>
+	<div>
+		First Name: @user.fname
+		<br>
+		Last Name: @user.lname
+		<br>
+		Phone Number: @user.pno
+		<br>
+		Address: @user.address
+	</div> 
+
+}
+</body>
+</html>
+
+

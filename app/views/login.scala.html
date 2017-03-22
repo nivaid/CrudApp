@@ -1,0 +1,39 @@
+@(userForm:Form[LoginForm])(implicit messages: Messages)
+ 
+@import helper._
+ <br><br>
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ 	<style type="text/css">
+ 	  .navbar-inverse {
+	    background-color: #4248ca !important ;
+	    border-color: #080808 !important;
+	    color: white !important;
+    }
+    a{
+        color: white !important;
+    }
+ 	</style>
+ </head>
+ <body style="background-color: #e0e0e0">
+
+ <br><br>
+@main("Login Form") {
+    <br>
+   
+    @form(action=routes.Application.login()) {
+        @inputText(userForm("First Name"))
+        @inputText(userForm("Last Name"))
+      
+        <input  style="color:black" type="submit" value="Submit">
+     
+    }
+}
+  
+
+ </body>
+ </html>
+      
+       

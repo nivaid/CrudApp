@@ -1,0 +1,42 @@
+@(userForm:Form[UsersForm])(implicit messages: Messages)
+ 
+@import helper._
+ <br><br>
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ 	<style type="text/css">
+ 	.navbar-inverse {
+	    background-color: #4248ca !important ;
+	    border-color: #080808 !important;
+	    color: white !important;
+    }
+    a{
+        color: white !important;
+    }
+ 	</style>
+ </head>
+ <body style="background-color: #e0e0e0">
+  @main("") {
+  <div>
+  	<h1 style="font-family: Calibri;">SignUp Form</h1>
+  </div>
+  <div>
+  
+    @form(action=routes.Application.createUser()) {
+        @inputText(userForm("First Name"))
+        @inputText(userForm("Last Name"))
+        @inputText(userForm("Phone Number"))
+        @inputText(userForm("Address"))
+        <input  style="color:black" type="submit" value="Submit">
+     
+    }
+  
+  </div> 
+}
+ </body>
+ </html>
+
+    
+
